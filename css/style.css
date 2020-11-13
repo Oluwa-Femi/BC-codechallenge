@@ -154,7 +154,7 @@ body {
 }
 header {
   background-color: #202529;
-  height: 9%;
+  height: 10%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -179,19 +179,27 @@ header nav a:hover {
   color: #c7c8c9;
 }
 header input {
-    /* 
-  background-image: url("https://github.githubassets.com/images/search-key-slash.svg");
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
   font-size: 0.9em;
+  background-image: url("https://github.githubassets.com/images/search-key-slash.svg");
+  background-position: 170px; 
+  background-repeat: no-repeat;
   background-color: #3c4044;
   padding: 0.5em;
-  border: none;
-  border-radius: 5px; */
+  -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
+header input::placeholder {
+    color: #dcdcdc;
+  }
 header input:focus {
-  width: 100%;
+  width: 540px;
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 5px;
+  background-image: none;
 }
 ul {
   display: flex;
