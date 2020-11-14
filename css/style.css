@@ -132,7 +132,6 @@ table {
 html,
 body {
   height: 100%;
-  
 }
 
 h1,
@@ -160,10 +159,13 @@ header {
   flex-direction: row;
   align-items: center;
 }
+header nav:nth-of-type(1) {
+  width: 45%;
+}
 header figure .github-logo {
   color: white;
   padding: 0.5em;
-  margin-left: 0.5em;
+  margin: 0 0.5em 0 0.5em;
   cursor: pointer;
 }
 header figure .github-logo:hover {
@@ -179,12 +181,12 @@ header nav a:hover {
   color: #c7c8c9;
 }
 header input {
-  width: 200px;
+  width: 300px;
   border: none;
   border-radius: 5px;
   font-size: 0.9em;
   background-image: url("https://github.githubassets.com/images/search-key-slash.svg");
-  background-position: 170px; 
+  background-position: 170px;
   background-repeat: no-repeat;
   background-color: #3c4044;
   padding: 0.5em;
@@ -192,21 +194,28 @@ header input {
   transition: width 0.4s ease-in-out;
 }
 header input::placeholder {
-    color: #dcdcdc;
-  }
+  color: #dcdcdc;
+}
 header input:focus {
-  width: 540px;
+  width: 500px;
   background-color: #dcdcdc;
   border: none;
   border-radius: 5px;
   background-image: none;
 }
-ul {
-  display: flex;
+header nav:nth-of-type(2) {
+  width: 20%;
+}
+
+.user-actions ul {
+    display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  text-decoration: none;
-  margin-right: 0.5em;
+}
+
+.user-actions ul li:nth-of-type(2) {
+  margin: 0 1em 0 01em;
+  color: #c7c8c9;
 }
 /* SVG */
 .octicon {
