@@ -230,45 +230,41 @@ header nav:nth-of-type(2) {
 /* Header styling */
 
 /* Main section styling */
-aside, section {
-    outline: 2px solid red;
-}
-
 aside {
     width: 30%;
     display: inline-block;
+    padding: 4em;
 }
+aside img {
+    width: 80%;
+    padding: 0.23em;
+    border-radius: 50%;
+  }
 aside h3 {
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 1.25;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 aside h4 {
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: 24px;
     color: #586069;
 }
 .btn-primary {
     width: 90%;
-    color: #24292e;
+    color: black;
+    border: 1px solid #DCDCDC;
+    border-radius: 6px;
     background-color: #fafbfc;
-    border-color: rgba(27,31,35,0.15);
-    transition: .2s cubic-bezier(.3,0,.5,1);
-    transition-property: color;
     position: relative;
     padding: 5px 16px;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    white-space: nowrap;
-    vertical-align: middle;
     cursor: pointer;
-    user-select: none;
-    border: 1px solid;
-    border-radius: 6px;
 }
+
 section {
     width: 70%;
     display: inline-block;
