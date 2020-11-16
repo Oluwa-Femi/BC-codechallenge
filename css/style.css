@@ -139,11 +139,10 @@ h2,
 h3,
 h4,
 h5 {
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   margin-bottom: 15px;
 }
 /* CSS RESET */
-
 body {
   height: 100vh;
   overflow: scroll;
@@ -210,9 +209,12 @@ header nav:nth-of-type(2) {
 }
 
 .user-actions ul {
-    display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+.user-actions img {
+  border-radius: 50%;
 }
 
 .user-actions ul li:nth-of-type(2) {
@@ -220,52 +222,118 @@ header nav:nth-of-type(2) {
   color: #c7c8c9;
 }
 /* SVG */
-.octicon {
+.user-actions .octicon {
   vertical-align: text-bottom;
   fill: white;
 }
-.github-logo {
-  color: white;
-}
+
 /* Header styling */
 
 /* Main section styling */
 aside {
-    width: 30%;
-    display: inline-block;
-    padding: 4em;
+  width: 30%;
+  display: inline-block;
+  padding: 4em;
 }
 aside img {
-    width: 80%;
-    padding: 0.23em;
-    border-radius: 50%;
-  }
+  width: 80%;
+  padding: 0.23em;
+  border-radius: 50%;
+}
 aside h3 {
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 1.2;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 aside h4 {
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    color: #586069;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  color: #586069;
 }
 .btn-primary {
-    width: 90%;
-    color: black;
-    border: 1px solid #DCDCDC;
-    border-radius: 6px;
-    background-color: #fafbfc;
-    position: relative;
-    padding: 5px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    cursor: pointer;
+  width: 100%;
+  color: black;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background-color: #fafbfc;
+  position: relative;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
 }
+#profile-edit h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+#profile-edit a {
+  text-decoration: none;
+  color: #586069;
+}
+#profile-edit a:hover {
+  text-decoration: none;
+  color: #1772da;
+}
+#profile-edit .octicon {
+  vertical-align: text-bottom;
+  fill: #586069;
+}
+#profile-edit .octicon:hover {
+  fill: #1772da;
+}
+.user-details {
+  display: inline-block;
+  padding: 15px 0 15px 0;
+}
+.user-contact {
+  display: inline-block;
+  padding: 5px 0 15px 0;
+}
+.user-contact li {
+    padding: 0 0 5px 0;
+}
+.user-contact a {
+  padding: 0 0 0 10px;
+}
+.user-highlights{
+    padding: 0 0 20px 0;
+}
+.user-highlights a {
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    color: #586069;
+  }
+  .user-highlights a:hover {
+    color:  #586069 !important;
+  }
+.pro-labelling {
+  display: inline-block;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  border-radius: 2em;
+  background-color: #fafbfc;
+  border: 1px solid #dcdcdc;
+}
+.project-avatar {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 6px;
+}
+.divider {
+    margin: 1em 0;
+    border-top: 1px solid #bcc2c9;;
+  }
 
 section {
-    width: 70%;
-    display: inline-block;
+  width: 70%;
+  display: inline-block;
 }
