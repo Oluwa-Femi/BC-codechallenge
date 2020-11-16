@@ -1,5 +1,5 @@
 # BC-codechallenge
-Coding challenge repo for Buycoins FE role
+Coding challenge repo for Buycoins FE role 
 
 # SUMMARY
   This project involves the recreation of my github page (the tab that lists my repositories) using 

@@ -238,6 +238,7 @@ aside {
 }
 aside img {
   width: 100%;
+  /* margin-top: -100px; */
   padding: 0.23em;
   border-radius: 50%;
 }
@@ -310,7 +311,7 @@ aside h4 {
 .user-highlights a:hover {
   color: #586069 !important;
 }
-.pro-labelling {
+.labelling {
   display: inline-block;
   padding: 0 7px;
   font-size: 12px;
@@ -319,6 +320,7 @@ aside h4 {
   border-radius: 2em;
   background-color: #fafbfc;
   border: 1px solid #dcdcdc;
+  margin-left: 10px;
 }
 .project-avatar {
   width: 32px;
@@ -335,25 +337,27 @@ aside h4 {
   border-top: 1px solid #bcc2c9;
 }
 /* Repository navigation */
-.repo-navigation {
-  display: flex;
-  /* justify-content: space-between; */
-  width: 100%;
+.repo-nav {
   padding: 40px 0 0 0;
   border-bottom: 1px solid #cbcfd5;
 }
-
-.repo-navigation li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 1em;
+.repo-nav ul {
+  display: flex;
+  margin-left: 30%;
 }
 
-.repo-navigation li:hover {
+.repo-nav li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.8em;
+  
+}
+
+.repo-nav li:hover {
   border-bottom-width: 3px;
 }
 
-.repo-navigation li:nth-of-type(2) {
+.repo-nav li:nth-of-type(2) {
   border-bottom: 3px solid #df570c;
   margin-left: 1em;
 }
