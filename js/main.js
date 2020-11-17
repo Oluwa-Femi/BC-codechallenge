@@ -65,6 +65,31 @@ const headers = {
     Authentication: "bearer "+ myData["token"]
 }
 
+const userData = (data) => {
+    const profileAvatar = document.querySelectorAll(".image");
+    images.forEach((image) => {
+        image.src = data.avatarUrl;
+    });
+    const names = document.querySelectorAll(".name");
+    names.forEach((name) => {
+        name.innerHTML = data.name;
+    });
+    const usernames = document.querySelectorAll(".username");
+    usernames.forEach((username) => {
+        username.innerHTML = data.login;
+    });
+    const userBios = document.querySelectorAll(".userBio");
+    userBios.forEach((userBio) => {
+        userBio.innerHTML = data.bio;
+    });
+    const focus = document.querySelector(".focus")
+    focus.innerHTML = data.status.emojiHTML
+}
+
+const setData = (data) => {
+    userData(data.user);
+    repoData(data.user.repositories)
+}
 
 const GETData = () => {
 fetch(baseUrl, {
