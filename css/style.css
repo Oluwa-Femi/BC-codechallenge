@@ -230,15 +230,18 @@ header nav:nth-of-type(2) {
 /* Header styling */
 
 /* Main section styling */
+main {
+  display: flex;
+}
 /* Sidebar */
 aside {
   width: 30%;
   display: inline-block;
-  padding: 4em;
+  padding: 0 4em 4em 4em;
+  margin-top: -50px;
 }
 aside img {
   width: 100%;
-  /* margin-top: -100px; */
   padding: 0.23em;
   border-radius: 50%;
 }
@@ -332,9 +335,14 @@ aside h4 {
   border-radius: 6px;
 }
 /* Sidebar */
-.divider {
+.divider-pry {
   margin: 1em 0;
-  border-top: 1px solid #bcc2c9;
+  border-top: 1px solid #cbcfd5;
+}
+
+.divider-sec {
+  margin: 1em 4em 1em 0;
+  border-top: 1px solid #cbcfd5;
 }
 /* Repository navigation */
 .repo-nav {
@@ -370,9 +378,11 @@ aside h4 {
 /* Repository navigation */
 
 /* Main section */
-section {
+#repo-list {
   width: 70%;
   display: inline-block;
+  padding: 20px 0 20px 0;
 }
+
 
 /* Main section */
