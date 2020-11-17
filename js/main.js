@@ -67,7 +67,7 @@ const headers = {
 
 const userData = (data) => {
     const profileAvatar = document.querySelectorAll(".image");
-    images.forEach((image) => {
+    profileAvatar.forEach((image) => {
         image.src = data.avatarUrl;
     });
     const names = document.querySelectorAll(".name");
@@ -86,6 +86,65 @@ const userData = (data) => {
     focus.innerHTML = data.status.emojiHTML
 }
 
+const repoData = (data) => {
+    const projInfo = document.querySelector('.repositories')
+    data.nodes.forEach(proj => {
+      const oneRepo = document.createElement('li')
+      const repoHTML = `
+      <div class="project-box">
+        <div class="left-project-box">
+          <h2>
+            <a href="${proj.url}">${proj.name}</a>
+          </h2>
+          ${proj.description ? "<p>" + proj.description + "</p>" : ""}
+  
+  
+          <div class="bottom-list">
+            <div class="elements" style="${!proj.languages.edges[0] ? "display: none;" : ""}">
+            <span class="notch" style="background: ${proj.languages.edges[0]
+              ? proj.languages.edges[0].node.color
+              : ""}">
+                </span>
+                  ${proj.languages.edges[0]
+              ? "<span>" +
+                  proj.languages.edges[0].node.name +
+                  "</span>"
+              : ""}
+            </div>
+  
+  
+          <div class="elements">
+            <ion-icon name="star-outline"></ion-icon> 
+              <span>
+                ${proj.stargazers.totalCount}
+            </span>
+          </div>
+  
+          <div class="elements">
+              <ion-icon name="git-network-outline"></ion-icon> 
+              <span>${proj.forkCount}</span>
+            </div>
+  
+          <div class="elements time">
+              Updated on ${new Date(proj.updatedAt).getDate() +
+              " " +
+              monthArray[new Date(proj.updatedAt).getMonth()]}
+          </div>
+          </div>
+  
+        </div>
+        <div class="star-box">
+          <button>
+            <ion-icon name="star-outline" class="mr-1"></ion-icon> <span> Star </span>
+          </button>
+        </div>
+      </div>
+      `
+      oneRepo.innerHTML = repoHTML
+      projInfo.append(oneRepo)
+    })
+  }
+  
 const setData = (data) => {
     userData(data.user);
     repoData(data.user.repositories)
