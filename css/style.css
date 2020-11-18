@@ -337,15 +337,7 @@ aside h4 {
   border-radius: 6px;
 }
 /* Sidebar */
-.divider-pry {
-  margin: 1em 0;
-  border-top: 0.5px solid #d2d7dd;
-}
 
-.divider-sec {
-  margin: 1em 5.6em 1em 0;
-  border-top: 0.5px solid #d2d7dd;
-}
 /* Repository navigation */
 .repo-nav {
   padding: 30px 0 0 0;
@@ -393,7 +385,7 @@ aside h4 {
   border: 1px solid #e1e4e8;
   border-radius: 6px;
   outline: none;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .search-section input .buttons{
   width: 40%;
@@ -457,6 +449,7 @@ aside h4 {
 
 #repos li .repo-list .left-repo-list h2 a {
   color: #0366d6;
+  text-decoration: none;
 }
 
 #repos li .repo-list .left-repo-list h2 a:hover {
@@ -513,3 +506,28 @@ aside h4 {
   padding: 2px;
 }
 /* Main section */
+.divider-pry {
+  margin: 1em 0;
+  border-top: 0.5px solid #d2d7dd;
+}
+
+.divider-sec {
+  margin: 1em 5.6em 1em 0;
+  border-top: 0.5px solid #d2d7dd;
+}
+.divider-ter {
+  margin: 1em 5.6em ;
+  border-top: 0.5px solid #d2d7dd;
+}
+
+footer {
+  margin: 1em 8em ;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #0366d6
+}
