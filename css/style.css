@@ -337,17 +337,17 @@ aside h4 {
 /* Sidebar */
 .divider-pry {
   margin: 1em 0;
-  border-top: 1px solid #cbcfd5;
+  border-top: 0.5px solid #d2d7dd;
 }
 
 .divider-sec {
-  margin: 1em 4em 1em 0;
-  border-top: 1px solid #cbcfd5;
+  margin: 1em 5.6em 1em 0;
+  border-top: 0.5px solid #d2d7dd;
 }
 /* Repository navigation */
 .repo-nav {
   padding: 30px 0 0 0;
-  border-bottom: 1px solid #cbcfd5;
+  border-bottom: 0.5px solid #d2d7dd;
 }
 .repo-nav ul {
   display: flex;
@@ -376,14 +376,119 @@ aside h4 {
   margin-left: 1em;
 }
 /* Repository navigation */
-
+/* Search section */
+.search-section{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.search-section input{
+  width: 31.25em;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4044;
+  vertical-align: middle;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  box-shadow: var(--color-shadow-inset);
+}
 /* Main section */
 #repo-list {
   width: 70%;
   display: inline-block;
   padding: 20px 0 20px 0;
 }
+#repos li div div h2 a {
+  color: #1b1f23;
+}
 
+#repos li .repo-list {
+  border-bottom: 0.5px solid #d2d7dd;
+  width: 90%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+}
 
+#repos li .repo-list .left-repo-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
 
+#repos li .repo-list .left-repo-list h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#repos li .repo-list .left-repo-list p {
+  color: gray;
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+#repos li .repo-list .left-repo-list h2 a {
+  color: #0366d6;
+}
+
+#repos li .repo-list .left-repo-list h2 a:hover {
+  text-decoration: underline;
+}
+
+#repos li .repo-list .left-repo-list .bottom-repo-list {
+  display: flex;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+#repos li .repo-list .star {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+#repos li .repo-list .star button {
+  height: 1.8rem;
+  border: 0.5px solid #d2d7dd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#repos li .repo-list .star button .octicon {
+  vertical-align: text-bottom;
+  fill: #586069;
+}
+
+.item-prop {
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+
+.item-prop span {
+  color: gray;
+  margin-left: 0.2rem;
+}
+
+.item-prop .bott-links {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.rep {
+  background-color: #d2d7dd;
+  border-radius: 25%;
+  padding: 2px;
+}
 /* Main section */
