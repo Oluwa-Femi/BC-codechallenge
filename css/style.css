@@ -546,6 +546,9 @@ footer a {
   text-decoration: none;
   color: #0366d6
 }
+footer .octicon {
+  display: none;
+}
 /* Footer */
 
 /* Responsiveness */
@@ -593,6 +596,9 @@ footer a {
     margin:0 25% 0 5%;
     justify-content: space-between;
   }
+  .repo-nav ul li .labelling{
+    display: none;
+  }
   main {
     display: flex;
     flex-direction: column;
@@ -605,9 +611,6 @@ footer a {
   }
   aside figure img {
     width: 40%;
-  }
-  aside h3{
-
   }
   .aside-hide {
     display: none;
@@ -629,5 +632,27 @@ footer a {
     display: flex;
     padding: 1em 0 0 0;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 400px) {
+  .repo-nav ul li  .octicon{
+    display: none;
+  }
+  #repo-list{
+    width: 100%;
+    padding-left: 1em;
+  }
+  .buttons {
+    display: none;
+  }
+  footer {
+    margin: 3em;
+  }
+  footer nav {
+    display: none;
+  }
+  footer .octicon {
+    display: inline-block;
   }
 }
