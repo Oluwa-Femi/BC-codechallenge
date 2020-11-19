@@ -5,7 +5,13 @@ const graphqlQuery = `{
     bio
     name
     websiteUrl
-    twitterUsername
+    company
+    followers{
+      totalCount
+    }
+    following{
+      totalCount
+    }
     status {
       emojiHTML
       message
@@ -65,6 +71,10 @@ const userData = (data) => {
   const userBios = document.querySelectorAll(".userBio");
   userBios.forEach((userBio) => {
     userBio.innerHTML = data.bio;
+  });
+  const website = document.querySelectorAll(".webUrl");
+  website.forEach((webUrl) => {
+    webUrl.innerHTML = data.websiteUrl;
   });
 };
 

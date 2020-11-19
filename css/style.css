@@ -247,12 +247,16 @@ aside img {
   padding: 0.23em;
   border-radius: 50%;
 }
-aside h3 {
+aside img .picture {
+  width: 60px;
+  height: 60px;
+}
+aside h3{
   font-size: 26px;
   font-weight: 500;
   line-height: 1.2;
 }
-aside h4 {
+aside h4{
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
