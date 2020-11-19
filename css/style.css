@@ -193,6 +193,8 @@ header input {
   padding: 0.5em;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+  outline: none;
+  cursor: text;
 }
 header input::placeholder {
   color: #dcdcdc;
@@ -230,24 +232,42 @@ header nav:nth-of-type(2) {
 /* Header styling */
 
 /* Main section styling */
+main {
+  display: flex;
+}
 /* Sidebar */
 aside {
   width: 30%;
   display: inline-block;
-  padding: 4em;
+  padding: 0 4em 4em 4em;
+  margin-top: -50px;
 }
-aside img {
+aside figure img {
   width: 100%;
-  /* margin-top: -100px; */
   padding: 0.23em;
   border-radius: 50%;
 }
-aside h3 {
+aside figure img .image {
+  width: 60px;
+  height: 60px;
+  position: relative
+}
+aside figure .emoji {
+  position: absolute;
+  top: 45%;
+  left: 22%;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 50%;
+  border: 0.5px solid #d2d7dd;
+}
+
+aside h3{
   font-size: 26px;
   font-weight: 500;
   line-height: 1.2;
 }
-aside h4 {
+aside h4{
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
@@ -332,14 +352,11 @@ aside h4 {
   border-radius: 6px;
 }
 /* Sidebar */
-.divider {
-  margin: 1em 0;
-  border-top: 1px solid #bcc2c9;
-}
+
 /* Repository navigation */
 .repo-nav {
-  padding: 40px 0 0 0;
-  border-bottom: 1px solid #cbcfd5;
+  padding: 30px 0 0 0;
+  border-bottom: 0.5px solid #d2d7dd;
 }
 .repo-nav ul {
   display: flex;
@@ -350,7 +367,13 @@ aside h4 {
   cursor: pointer;
   display: inline-block;
   padding: 0.8em;
-  
+  color:  #586069;
+  font-size: 14px; 
+}
+.repo-nav li .octicon {
+  vertical-align: text-bottom;
+  fill: #586069;
+  margin-right: 5px;
 }
 
 .repo-nav li:hover {
@@ -362,7 +385,174 @@ aside h4 {
   margin-left: 1em;
 }
 /* Repository navigation */
-section {
+/* Search section */
+.search-section{
+  /* width: 100%; */
+  display: flex;
+  
+}
+.search-section input{
+  width: 55%;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3c4044;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  outline: none;
+  margin-right: 10px;
+}
+.search-section input .buttons{
+  width: 40%;
+  padding: 5px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-section .buttons button {
+  background-color: #fafbfc;
+  padding: 5px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+.search-section .buttons .green {
+  background-color: #2ea44f;
+  color: white;
+}
+.search-section .buttons .green .octicon {
+  vertical-align: text-bottom;
+  fill: white;
+}
+/* Main section */
+#repo-list {
   width: 70%;
   display: inline-block;
+  padding: 20px 0 20px 0;
 }
+#repos li div div h2 a {
+  color: #1b1f23;
+}
+
+#repos li .repo-list {
+  border-bottom: 0.5px solid #d2d7dd;
+  width: 90%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+}
+
+#repos li .repo-list .left-repo-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+#repos li .repo-list .left-repo-list h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#repos li .repo-list .left-repo-list p {
+  color: gray;
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+#repos li .repo-list .left-repo-list h2 a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+#repos li .repo-list .left-repo-list h2 a:hover {
+  text-decoration: underline;
+}
+
+#repos li .repo-list .left-repo-list .bottom-repo-list {
+  display: flex;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+#repos li .repo-list .star {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+#repos li .repo-list .star button {
+  height: 1.8rem;
+  border: 0.5px solid #d2d7dd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#repos li .repo-list .star button .octicon {
+  vertical-align: text-bottom;
+  fill: #586069;
+}
+
+.item-prop {
+  margin-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+
+.item-prop span {
+  color: gray;
+  margin-left: 0.2rem;
+}
+
+.item-prop .bott-links {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.rep {
+  background-color: #d2d7dd;
+  border-radius: 25%;
+  padding: 2px;
+}
+/* Main section */
+/* dividers */
+.divider-pry {
+  margin: 1em 0;
+  border-top: 0.5px solid #d2d7dd;
+}
+.divider-sec {
+  margin: 1em 5.6em 1em 0;
+  border-top: 0.5px solid #d2d7dd;
+}
+.divider-ter {
+  margin: 1em 5.6em ;
+  border-top: 0.5px solid #d2d7dd;
+}
+/* dividers */
+
+/* Footer */
+footer {
+  margin: 1em 8em ;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #0366d6
+}
+/* Footer */
+
+/* Responsiveness */
+/* @media (max-width: 1141px) {
+  .inner-low-tab {
+    width: 70%;
+  }
+} */
