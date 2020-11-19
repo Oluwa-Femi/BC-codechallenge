@@ -242,15 +242,26 @@ aside {
   padding: 0 4em 4em 4em;
   margin-top: -50px;
 }
-aside img {
+aside figure img {
   width: 100%;
   padding: 0.23em;
   border-radius: 50%;
 }
-aside img .picture {
+aside figure img .image {
   width: 60px;
   height: 60px;
+  position: relative
 }
+aside figure .emoji {
+  position: absolute;
+  top: 45%;
+  left: 22%;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 50%;
+  border: 0.5px solid #d2d7dd;
+}
+
 aside h3{
   font-size: 26px;
   font-weight: 500;

@@ -6,10 +6,14 @@ const graphqlQuery = `{
     name
     websiteUrl
     company
+    location
     followers{
       totalCount
     }
     following{
+      totalCount
+    }
+    pinnedItems{
       totalCount
     }
     status {
@@ -76,6 +80,28 @@ const userData = (data) => {
   website.forEach((webUrl) => {
     webUrl.innerHTML = data.websiteUrl;
   });
+  const company = document.querySelectorAll(".affiliate");
+  company.forEach((affiliate) => {
+    affiliate.innerHTML = data.company;
+  });
+  const following = document.querySelectorAll(".follow");
+  following.forEach((follow) => {
+    follow.innerHTML =data.following.totalCount + " following" ;
+  });
+  const followersCount = document.querySelectorAll(".followers");
+  followersCount.forEach((followers) => {
+    followers.innerHTML = "· " + data.followers.totalCount + " followers" ;;
+  });
+  const starredRepo = document.querySelectorAll(".star");
+  starredRepo.forEach((star) => {
+    star.innerHTML = data.pinnedItems.totalCount;
+  });
+  const address = document.querySelectorAll(".location");
+  address.forEach((location) => {
+    location.innerHTML = data.location;
+  });
+  const emojiItem = document.querySelector(".emoji");
+  emojiItem.innerHTML = data.status.emojiHTML;
 };
 
 
