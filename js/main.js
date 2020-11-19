@@ -101,7 +101,7 @@ const userData = (data) => {
     location.innerHTML = data.location;
   });
   const emojiItem = document.querySelector(".emoji");
-  emojiItem.innerHTML = data.status.emojiHTML;
+  emojiIteminnerHTML = data.status.emojiHTML;
 };
 
 
@@ -146,18 +146,19 @@ data.nodes.forEach(proj => {
   oneRepo.innerHTML = projHTML
   projInfo.append(oneRepo)
 })
-}
+};
+
 const setData = (data) => {
   userData(data.user);
   repoData(data.user.repositories)
-}
+};
 
 const baseUrl = "https://api.github.com/graphql";
 
 const newHeaders = {
   "Content-Type": "application/json",
 Accept: "application/json",
-Authorization: "bearer " + "765a64ad4daf65d28611aef3ac3015a004edcbad"
+Authorization: "bearer " + "8c5b03c3723ee9e23e9be6dbf2eef40843a45855",
 };
 
 const GETData = () => {
@@ -168,7 +169,9 @@ const GETData = () => {
     })
         .then(res => res.json())
         .then(res => {
+            debugger;
             setData(res.data)
+            console.log(res);
         })
         .catch(err => {
             console.log(err)
