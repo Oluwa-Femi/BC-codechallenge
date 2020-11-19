@@ -158,7 +158,7 @@ const baseUrl = "https://api.github.com/graphql";
 const newHeaders = {
   "Content-Type": "application/json",
 Accept: "application/json",
-Authorization: "bearer " + "8c5b03c3723ee9e23e9be6dbf2eef40843a45855",
+Authorization: "bearer " + "b4d7fe26571f5cda490dedec22eb7b0f2cc602a0",
 };
 
 const GETData = () => {
@@ -169,7 +169,6 @@ const GETData = () => {
     })
         .then(res => res.json())
         .then(res => {
-            debugger;
             setData(res.data)
             console.log(res);
         })
