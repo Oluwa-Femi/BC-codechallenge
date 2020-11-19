@@ -160,6 +160,11 @@ header {
   flex-direction: row;
   align-items: center;
 }
+header .octicon-three-bars {
+  padding: 0 0 0 0.5em;
+  fill: white;
+  display: none
+}
 header nav:nth-of-type(1) {
   width: 45%;
 }
@@ -252,15 +257,6 @@ aside figure img .image {
   height: 60px;
   position: relative
 }
-aside figure .emoji {
-  position: absolute;
-  top: 45%;
-  left: 22%;
-  background-color: white;
-  padding: 0.3rem;
-  border-radius: 50%;
-  border: 0.5px solid #d2d7dd;
-}
 
 aside h3{
   font-size: 26px;
@@ -275,6 +271,7 @@ aside h4{
 }
 .btn-primary {
   width: 100%;
+  height: fit-content;
   color: black;
   border: 1px solid #dcdcdc;
   border-radius: 6px;
@@ -393,6 +390,7 @@ aside h4{
 }
 .search-section input{
   width: 55%;
+  height: fit-content;
   padding: 5px 12px;
   font-size: 14px;
   line-height: 20px;
@@ -548,11 +546,113 @@ footer a {
   text-decoration: none;
   color: #0366d6
 }
+footer .octicon {
+  display: none;
+}
 /* Footer */
 
 /* Responsiveness */
-/* @media (max-width: 1141px) {
-  .inner-low-tab {
-    width: 70%;
+@media (max-width: 1057px) {
+  .search-section input {
+    width: 35%;
   }
-} */
+  .search-section input .buttons{
+    width: 20%;
+  }
+}
+@media (max-width: 765px) {
+  header {
+    background-color: #202529;
+    height: 10%;
+    width: 100%;
+    padding: 0 2em 0 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+  }
+  header .octicon-three-bars {
+    padding: 0 0 0 0.5em;
+    fill: white;
+    display: inline-block;
+  }
+  header form {
+    display: none;
+  }
+  header nav:nth-of-type(1){
+    display: none;
+  }
+  header nav:nth-of-type(2) ul li .octicon-plus {
+    display: none;
+  }
+  header nav:nth-of-type(2) ul li img {
+    display: none;
+  }
+  header nav:nth-of-type(2) ul li .fa-caret-down {
+    display: none;
+  }
+  .repo-nav ul {
+    display: flex;
+    margin:0 25% 0 5%;
+    justify-content: space-between;
+  }
+  .repo-nav ul li .labelling{
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+    display: flex;
+    padding: 0 4em 0em 4em;
+    margin-top: 10px;
+  }
+  aside figure img {
+    width: 40%;
+  }
+  .aside-hide {
+    display: none;
+  }
+  #repo-list{
+    width: 100%;
+    padding-left: 4em;
+  }
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    padding-right: 4em;
+  }
+  .search-section input {
+    width: 100%;
+  }
+  .buttons {
+    width: 70%;
+    display: flex;
+    padding: 1em 0 0 0;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 400px) {
+  .repo-nav ul li  .octicon{
+    display: none;
+  }
+  #repo-list{
+    width: 100%;
+    padding-left: 1em;
+  }
+  .buttons {
+    display: none;
+  }
+  footer {
+    margin: 3em;
+  }
+  footer nav {
+    display: none;
+  }
+  footer .octicon {
+    display: inline-block;
+  }
+}

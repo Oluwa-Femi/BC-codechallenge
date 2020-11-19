@@ -1,3 +1,5 @@
+const token = my_token;
+
 const graphqlQuery = `{
   user(login: "Oluwa-femi") {
     avatarUrl
@@ -158,7 +160,7 @@ const baseUrl = "https://api.github.com/graphql";
 const newHeaders = {
   "Content-Type": "application/json",
 Accept: "application/json",
-Authorization: "bearer " + "8c5b03c3723ee9e23e9be6dbf2eef40843a45855",
+Authorization: "bearer " + `${token}`,
 };
 
 const GETData = () => {
@@ -169,7 +171,6 @@ const GETData = () => {
     })
         .then(res => res.json())
         .then(res => {
-            debugger;
             setData(res.data)
             console.log(res);
         })
