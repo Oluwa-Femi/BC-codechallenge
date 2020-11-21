@@ -1,6 +1,6 @@
 # BC-codechallenge
 Coding challenge repo for Buycoins FE role
-Deployed [link:]  (https://bc-codechallenge.vercel.app/)
+Deployed [link]  (https://bc-codechallenge.vercel.app/)
 
 # SCREENSHOT
 ![Screenshot](https://github.com/Oluwa-Femi/BC-codechallenge/blob/main/assets/screenshot.png)
