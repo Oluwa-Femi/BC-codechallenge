@@ -2,9 +2,6 @@
 Coding challenge repo for Buycoins FE role
 Deployed [link:]  (https://bc-codechallenge.vercel.app/)
 
-# SCREENSHOT
-![Screenshot](https://github.com/Oluwa-Femi/BC-codechallenge/tree/main/assets/screenshot.png)
-
 # SUMMARY
   This project involves the recreation of my github page (the tab that lists my repositories) using 
   GraphQL GitHub API (https://developer.github.com/v4/explorer/). This project will follow the timeline outlined below and does include modifications of activities within the scope.
@@ -30,3 +27,6 @@ Deployed [link:]  (https://bc-codechallenge.vercel.app/)
 - HTML
 - CSS
 - PLAIN OLD JS
+
+# SCREENSHOT
+![Screenshot](https://github.com/Oluwa-Femi/BC-codechallenge/blob/main/assets/screenshot.png)
