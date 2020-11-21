@@ -1,4 +1,4 @@
-var mykey = config.MY_TOKEN;
+var mykey = MY_TOKEN;
 
 const graphqlQuery = `{
   user(login: "Oluwa-femi") {
