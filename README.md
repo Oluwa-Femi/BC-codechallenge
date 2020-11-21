@@ -23,7 +23,10 @@ Coding challenge repo for Buycoins FE role (https://bc-codechallenge.vercel.app/
 
 # HOW TO RUN
 - Fork and clone project
-- Open index page
+- Create a config file in the root folder
+- Add your key in the config
+- Run the site through index.html
+
 
 # STACKS 
 - HTML
